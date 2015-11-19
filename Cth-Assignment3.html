@@ -7,10 +7,10 @@
 		    <p style="font-size: 10 px; color: grey"> Dit kunstwerk is gedraaid, hoe hoort het wel? Gebruik de knoppen om aan te geven wat echte bovenkant is. Veel plezier!
 	    	</p> 
 	    	<p>
-		        <p><img id="kunstwerk" src="http://www.kunstvoorinhuis.nl/uploaded_images5_1/schilderij%20modern%20rood%20geel.jpg" class="rotate90"/>	    	    
+		        <p><img id="kunstwerk" src="http://www.kanishaarlem.nl/Portals/eee323c8-7112-4950-8e83-8be1e745e4ef/0301.JPG" class="rotate90"/>	    	    
 	    	</p>
 	    	<p>
-		        <button name="button" onclick="turnImage()">Draai rechtsom</button>
+		        <button name="button" onclick="turnImage(90)">Draai rechtsom</button>
 		        <button name="button_guess" onclick="guess()">Check!</button>
 		        <button name="button" onclick="nextImage()">Volgende schilderij</button>
 		    </p>
@@ -21,50 +21,8 @@
 
 
     <script src="Cth-Assignment3.js"> </script>   
-    <script> 
-var Image=document.getElementById("kunstwerk");
+    <script src="cth-assignment3-rotation.js"> 
 
-var Rotation = 0;
-	        
-var turnImage=function() {
-	  console.log("knop 1 doet het");
-	  Rotation = Rotation + 90;
-	  Image.style.transform = 'rotate('+Rotation+'deg)'; 
-	        };
-	        
-var guess = function() {
-	 console.log("knop 2 doet het");
-	  if (Rotation % 360 === 0) {
-	       window.alert("Heel goed! Probeer de volgende eens!");
-	       }  
-	  else 
-	       window.alert("Helaas, draai nog een keer!");
-	        };
-
-var imgArray = [
-    '<a href="#"><img class="images" src="http://europeanastatic.eu/api/image?uri=http%3A%2F%2Fwww.collectiedeventermusea.nl%2Fwwwwopacx%2Fwwwopac.ashx%3Fcommand%3Dgetcontent%26server%3Dimages%26value%3DKnecht-Drenth%255CKD2003-0329.jpg&size=LARGE&type=IMAGE"/></a>',
-    '<a href="#"><img class="images" src="http://europeanastatic.eu/api/image?uri=http%3A%2F%2Fwww.collectiedeventermusea.nl%2Fwwwwopacx%2Fwwwopac.ashx%3Fcommand%3Dgetcontent%26server%3Dimages%26value%3DKnecht-Drenth%255CKD2003-0328.jpg&size=LARGE&type=IMAGE"/></a>',
-    '<a href="#"><img class="images" src="http://europeanastatic.eu/api/image?uri=http%3A%2F%2Fwww.collectiedeventermusea.nl%2Fwwwwopacx%2Fwwwopac.ashx%3Fcommand%3Dgetcontent%26server%3Dimages%26value%3DKnecht-Drenth%255CKD2003-0327.jpg&size=LARGE&type=IMAGE"/></a>',
-    '<a href="#"><img class="images" src="http://europeanastatic.eu/api/image?uri=http%3A%2F%2Fwww.collectiedeventermusea.nl%2Fwwwwopacx%2Fwwwopac.ashx%3Fcommand%3Dgetcontent%26server%3Dimages%26value%3DKnecht-Drenth%255CKD2003-0330.jpg&size=LARGE&type=IMAGE"/></a>',];
-    
-var showNextImage= 0;   
-    
-var nextImage= function() { 
-    document.getElementById("kunstwerk").src = imgArray[showNextImage];
-    console.log("knop 3 doet het");
-    
-    if (showNextImage < (imgArray.length - 1)) {
-        console.log("jaa");
-    showNextImage = showNextImage + 1; 
-    console.log(showNextImage);
-    }
-    else {
-        console.log("neeee");
-        console.log(showNextImage);
-        showNextImage = 0;
-    }
-    document.getElementById('kunstwerk');
-}    
     </script>
     
 </body>
